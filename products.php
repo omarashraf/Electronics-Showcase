@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="small-10 small-centered columns">
 				<div class="products-container-title">
-					<h2>*Title for showcase of electronic products*</h2>
+					<h2>Products</h2>
 				</div>
 				<div class="products-container-items">
 					<div class="row">
@@ -55,9 +55,7 @@
 												  <div class="product-title">' 
 												  . $products_arr[$i]['product_name'] 
 												  . '</div>
-												  <div class="product-description">'
-												  . $products_arr[$i]['product_description'] 
-												  .'</div>
+												  
 												  <div class="product-price"> $'
 												  . $products_arr[$i]['product_price'] 
 												  .'</div>
