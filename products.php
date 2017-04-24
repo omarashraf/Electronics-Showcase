@@ -38,29 +38,38 @@
 				<div class="products-container-items">
 					<div class="row">
 						<div class="small-12 columns">
-							<div class="row">
+							<!-- <div class="row"> -->
 								<?php
 									for ($i = 1; $i < sizeof($products_arr); $i++) {
-										echo '<div class="small-4 columns">
-											  <div class="product-thumbnail">
-												  <img src="' 
-												  . $products_arr[$i]['product_thumbnail']  
-												  . '" height="250" width="250" />
-											  </div>
-											  <div class="product-title">' 
-											  . $products_arr[$i]['product_name'] 
-											  . '</div>
-											  <div class="product-description">'
-											  . $products_arr[$i]['product_description'] 
-											  .'</div>
-											  <div class="product-price"> $'
-											  . $products_arr[$i]['product_price'] 
-											  .'</div>
-											  <hr>
-											  </div>';
+										echo '<div class="row">';
+										for ($j = 0; $j < 3; $j++) {
+											if ($i >= sizeof($products_arr)) {
+												break;
+											}
+											echo '<div class="small-4 columns">
+												  <div class="product-thumbnail">
+													  <img src="' 
+													  . $products_arr[$i]['product_thumbnail']  
+													  . '" height="250" width="250" />
+												  </div>
+												  <div class="product-title">' 
+												  . $products_arr[$i]['product_name'] 
+												  . '</div>
+												  <div class="product-description">'
+												  . $products_arr[$i]['product_description'] 
+												  .'</div>
+												  <div class="product-price"> $'
+												  . $products_arr[$i]['product_price'] 
+												  .'</div>
+												  <hr>
+												  </div>';
+											$i++;
+										}
+										$i--;
+										echo '</div>';
 									}
 								?>
-							</div>
+							<!-- </div> -->
 						</div>
 					</div>
 				</div>
